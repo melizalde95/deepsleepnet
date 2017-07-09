@@ -59,6 +59,8 @@ EPOCH_SEC_SIZE = 30
 
 
 def main():
+    print "Initializing"
+
     parser = argparse.ArgumentParser()
     parser.add_argument("--data_dir", type=str, default="/data/physionet_sleep",
                         help="File path to the CSV or NPY file that contains walking data.")
@@ -68,6 +70,7 @@ def main():
                         help="File path to the trained model used to estimate walking speeds.")
     args = parser.parse_args()
 
+    print args
     # Output dir
     if not os.path.exists(args.output_dir):
         os.makedirs(args.output_dir)
@@ -85,6 +88,8 @@ def main():
     ann_fnames.sort()
     psg_fnames = np.asarray(psg_fnames)
     ann_fnames = np.asarray(ann_fnames)
+
+    print psg_fnames, ann_fnames
 
     for i in range(len(psg_fnames)):
         # if not "ST7171J0-PSG.edf" in psg_fnames[i]:
