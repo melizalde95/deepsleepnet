@@ -89,7 +89,7 @@ def main():
     for i in range(len(psg_fnames)):
         # if not "ST7171J0-PSG.edf" in psg_fnames[i]:
         #     continue
-
+        print psg_fnames
         raw = read_raw_edf(psg_fnames[i], preload=True, stim_channel=None)
         sampling_rate = raw.info['sfreq']
         raw_ch_df = raw.to_data_frame(scale_time=100.0)[select_ch]
