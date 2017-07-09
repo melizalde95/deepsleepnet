@@ -196,9 +196,8 @@ class DeepFeatureNet(object):
 
             # Cross-entropy loss
             loss = tf.nn.sparse_softmax_cross_entropy_with_logits(
-                self.logits,
                 self.target_var,
-                name="sparse_softmax_cross_entropy_with_logits"
+                self.logits
             )
             loss = tf.reduce_mean(loss, name="cross_entropy")
 
