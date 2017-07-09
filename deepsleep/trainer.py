@@ -29,7 +29,7 @@ class Trainer(object):
     def __init__(
         self,
         interval_plot_filter=50,
-        interval_save_model=100,
+        interval_save_model=15,
         interval_print_cm=10
     ):
         self.interval_plot_filter = interval_plot_filter
