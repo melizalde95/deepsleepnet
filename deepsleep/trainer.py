@@ -21,7 +21,7 @@ from tensorlayer.db import TensorDB
 from tensorlayer.db import JobStatus
 
 
-db = TensorDB(ip='146.169.33.34', port=27020, db_name='DeepSleepNet', user_name='tensorlayer', password='Tensorlayer123', studyID='1')
+db = TensorDB(ip='localhost', port=27017, db_name='DeepSleepNet', studyID='1')
 
 
 class Trainer(object):
