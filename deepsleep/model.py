@@ -154,7 +154,7 @@ class DeepFeatureNet(object):
 
         # Concat
         name = "l{}_concat".format(self.layer_idx)
-        network = tf.concat(1, output_conns, name=name)
+        network = tf.concat(output_conns, 1, name=name)
         self.activations.append((name, network))
         self.layer_idx += 1
 
